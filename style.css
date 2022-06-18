@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  background-image: url(https://images2.alphacoders.com/941/thumb-1920-941898.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: Tahoma, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+td {
+  width: 7.142857142857143%;
+  height: 16.66666666666667%;
+}
+
+table {
+  width: 100%;
+  height: 95vh;
+}
+
+td div {
+  display: flex;
+  text-align: center;
+  font-size: 85%;
+}
+
+p {
+  margin-bottom: 15px;
+  color: white;
+  -webkit-text-stroke: 0.3px #000;
+  text-shadow: 1px 1px 1.5px #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.modal {
+  position: fixed;
+  margin: 0 auto;
+  bottom: 0vh;
+  background: #c9c9c9;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.fechar {
+  position: absolute;
+  width: 30px;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+table img,
+#menu-iniciar-start {
+  width: 60%;
+}
+
+#barraDeTarefas {
+  box-sizing: border-box;
+  height: 5vmin;
+  width: 100%;
+  background-color: #024088;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(28, 77, 203, 0) 0%,
+      #4595df 3.12%,
+      rgba(46, 84, 182, 0.71) 14.06%,
+      rgba(47, 97, 181, 0.922667) 83.33%,
+      #2057a9 100%
+    ),
+    #126ad1;
+  box-shadow: inset -2px 0px 3px #00000032;
+}
+
+#menu-iniciar {
+  height: 5vmin;
+  width: 8%;
+  background-color: #108605;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  background: radial-gradient(
+      46.58% 430.9% at 46.58% 50%,
+      rgba(20, 255, 0, 0.142) 0%,
+      rgba(4, 85, 27, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #5bc729 6.77%,
+      rgba(0, 107, 43, 0.85) 13.54%,
+      #1cad10 84.37%,
+      #1e7807 100%
+    ),
+    #2cc21f;
+  box-shadow: inset -1px 0px 4px #04420cc2;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+#menu-iniciar-start {
+  margin-left: 12%;
+}
+
+#barra-lateral {
+  display: flex;
+  position: absolute;
+  height: 5vmin;
+  right: 0;
+  width: 10%;
+  background-color: #67e4ff;
+  bottom: 0;
+  background: linear-gradient(
+      180deg,
+      #5fd8f2 6.77%,
+      rgba(0, 135, 193, 0.71) 17.19%,
+      rgba(14, 136, 189, 0.824906) 80.73%,
+      #1882af 100%
+    ),
+    #67e4ff;
+  box-shadow: inset 2px 0px 1px rgba(206, 243, 237, 0.25);
+  align-items: center;
+  justify-content: center;
+}
+
+#icone-som {
+  width: 47%;
+  margin-top: 15%;
+}
+
+#hora {
+  color: #ffffff;
+  font-size: 83%;
+  line-height: 2;
+}
+
+#modal-imagens {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 100%;
+  justify-content: center;
+}
+
+#modal-imagens .img-gato {
+  margin: 0 auto;
+  padding: 0;
+  height: 94.8%;
+}
+
+#imagens-api-gato {
+  height: 100%;
+  margin: 0;
+}
+
+#modal-imagens .barra {
+  width: 100%;
+  height: 5vmin;
+  background: linear-gradient(
+      180deg,
+      rgba(28, 77, 203, 0) 0%,
+      #4595df 3.12%,
+      rgba(46, 84, 182, 0.71) 14.06%,
+      rgba(47, 97, 181, 0.922667) 83.33%,
+      #2057a9 100%
+    ),
+    #126ad1;
+  margin: 0;
+  padding: 0;
+}
