@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div id="table">
+    <div id="desktop">
         <!-- LINHA 1 -->
         <div class="celula-disponivel td">
             <div draggable="true" class="teste">
@@ -66,7 +66,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#modal-imagens" id="link-api-gatos">
-                    <img src="/img/Frame 1.png" alt="">
+                    <img src="/img/JPG.png" alt="">
                     <p>gatos.jpg</p>
                 </a>
             </div>
@@ -109,7 +109,7 @@
         <!-- LINHA 5  -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#abrirModal">
+                <a href="#">
                     <img src="/img/Recycle-Bin.png" alt="">
                     <p>Lixeira</p>
                 </a>
@@ -132,7 +132,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#paint">
-                    <img src="/img/ms-paint.ico" alt="">
+                    <img src="/img/Paint.png" alt="">
                     <p>Paint</p>
                 </a>
             </div>
@@ -153,75 +153,157 @@
 
     <div id="barraDeTarefas">
         <a href="#menu" onclick="carregar_menu()">
-            <div id="menu-iniciar">
-                <img id="menu-iniciar-start" src="/img/menu.png" alt="">
-            </div>
+            <div id="menu-iniciar"><img id="menu-iniciar-start" src="/img/menu.png" alt=""></div>
         </a>
         <div id="barra-lateral">
-            <a href="#">
-                <img id="icone-som" src="/img/Sounds, Speech, and Audio Devices.ico" alt="">
-            </a>
-            <a href="">
-                <output id="hora"></output>
-            </a>
+            <a href="#"><img id="icone-som" src="/img/Sounds, Speech, and Audio Devices.ico" alt=""></a>
+            <a href=""><output id="hora"></output></a>
         </div>
     </div>
 
     <!-- MODALS -->
-    <!-- MODAL GERAL -->
-    <div id="abrirModal" class="modal">
-        <div class="modal-header">
-            <div style="width: 800px; display: flex; gap: 3px;">
-                <img src="/img/Folder Closed.ico" alt="">
-                <h4>Pasta</h4>
-            </div>
-            <div class="modal-header-botoes">
-                <a href="#">
-                    <img src="/img/botao-minimizar.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="/img/botao-maximizar.png" alt="">
-                </a>
-                <a href="#fechar" title="Fechar" class="fechar">
-                    <img src="/img/botao-fechar.png" alt="">
-                </a>
-            </div>
-        </div>
-        <h1>Bacon ipsum dolor amet short loin chislic jerky tri-tip pork loin</h1>
-        <p>spare ribs ground round buffalo incididunt culpa deserunt venison. In eu t-bone commodo, magna shank beef ground round kevin in occaecat id pariatur voluptate.</p>
-        <p>T-bone corned beef pork loin, cupim buffalo brisket filet mignon shankle short ribs doner. Kielbasa kevin rump meatball buffalo pancetta salami</p>
-    </div>
-
     <!-- MODAL - PASTA: MEU COMPUTADOR -->
     <div id="meu-computador" class="modal">
         <div class="modal-header">
             <div style="width: 800px; display: flex; gap: 3px;">
                 <img src="/img/Monitor.ico" alt="">
-                <h4>Meu Computador</h4>
+                <h4 style="font-size: var(--16px);" ;>Meu Computador</h4>
             </div>
             <div class="modal-header-botoes">
-                <a href="#">
-                    <img src="/img/botao-minimizar.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="/img/botao-maximizar.png" alt="">
-                </a>
-                <a href="#fechar" title="Fechar" class="fechar">
-                    <img src="/img/botao-fechar.png" alt="">
-                </a>
+                <a href="#"><img src="/img/botao-minimizar.png" alt=""></a>
+                <a href="#"><img src="/img/botao-maximizar.png" alt=""></a>
+                <a href="#fechar" title="Fechar" class="fechar"><img src="/img/botao-fechar.png" alt=""></a>
             </div>
         </div>
-        <h1>daushduihasiudhaishdiah</h1>
-        <h1>daushduihasiudhaishdiah</h1>
-        <h1>daushduihasiusddfsdffdhaishdiah</h1>
-        <h1>daushduihasiudhaishdiah</h1>
+        <ul style="display: flex; gap: 5px; background-color: #F1EFE1; border-bottom: 2px solid #DEDED2;font-size: var(--16px);">
+            <li><ins>A</ins>rquivo</li>
+            <li>E<ins>d</ins>itar</li>
+            <li>E<ins>x</ins>ibir</li>
+            <li>F<ins>a</ins>voritos</li>
+            <li>F<ins>e</ins>rramentas</li>
+            <li>Aj<ins>u</ins>da</li>
+            <img style="background-color: #ffffff; padding: 0 10px; margin-left: auto;" class="imagem-media" src="/img/logo windows.png" alt="">
+        </ul>
+        <div>
+            <div id="navegacao" style="display: flex; align-items: center; gap: 2vh; background-color: #F1EFE1; border-bottom: 2px solid #DEDED2;padding: 1vh;">
+                <img class="imagem-media" src="/img/Back.png" alt="">
+                <img src="/img/seta-pra-baixo.svg" alt="">
+                <img class="imagem-media" src="/img/Forward.png" alt="">
+                <img src="/img/seta-pra-baixo.svg" alt="">
+                <img class="imagem-media" src="/img/Up.png" alt="">
+                <img class="imagem-media" src="/img/pesquisar.ico" alt="">
+                <img class="imagem-media" src="/img/pastas-abertas.png" alt="">
+                <img class="imagem-media" src="/img/Icon View.png" alt="">
+                <img src="/img/seta-pra-baixo.svg" alt="">
+
+            </div>
+            <div id="meu-pc-endereco">
+                <h4 style="font-size: 1.2vw;font-weight: normal;">E<ins>n</ins>dereço</h4>
+                <div id="endereco-link">
+                    <p>Meu computador</p>
+                    <img src="/img/seta-pra-baixo.svg" alt="">
+                </div>
+                <div id="endereco-ir">
+                    <p>Ir</p>
+                </div>
+            </div>
+            <div id="meu-pc-grid">
+                <section id="meu-pc-grid-atalhos">
+                    <div class="atalhos-sections">
+                        <ul>
+                            <li class="atalhos-header">
+                                <h2>Tarefas do sistema</h2>
+                                <img width="20" src="/img/setas-duplas.svg" alt="">
+                            </li>
+
+                            <li class="atalhos-pastas">
+                                <img class="mini-imagens" src="/img/253.ico" alt="">
+                                <p>Exibir informações do sistema</p>
+                            </li>
+                            <li class="atalhos-pastas">
+                                <img class="mini-imagens" src="/img/Programs.png" alt="">
+                                <p>Adicionar ou remover programas</p>
+                            </li>
+                            <li class="atalhos-pastas">
+                                <img class="mini-imagens" src="/img/painel-de-controle.ico" alt="">
+                                <p>Alterar uma configuração</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="atalhos-sections">
+                        <li class="atalhos-header">
+                            <h2>Outros locais</h2>
+                            <img width="20" src="/img/setas-duplas.svg" alt="">
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/locais-de-rede.ico" alt="">
+                            <p>Meus locais de rede</p>
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/meus-documentos.ico" alt="">
+                            <p>Meus documentos</p>
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/Folder Closed.ico" alt="">
+                            <p>Documentos compartilhados</p>
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/painel-de-controle.ico" alt="">
+                            <p>Painel de controle</p>
+                        </li>
+                    </ul>
+
+                    <ul class="atalhos-sections">
+                        <li class="atalhos-header">
+                            <h2>Detalhes</h2>
+                            <img class="" width="20" src="/img/setas-duplas.svg" alt="">
+                        </li>
+                        <li>
+                            <h2>Meu computador</h2>
+                            <p>Pasta do sistema</p>
+                        </li>
+                    </ul>
+                </section>
+                <section id="meu-pc-grid-main">
+                    <h2 class="topicos-header">Arquivos armazenados neste computador</h2>
+                    <div class="meu-pc-topicos">
+                        <div class="meu-pc-itens">
+                            <img class="imagem-grande" src="/img/Folder Closed.ico" alt="">
+                            <p>Documentos compartilhados</p>
+                        </div>
+                        <div class="meu-pc-itens">
+                            <img class="imagem-grande" src="/img/Folder Closed.ico" alt="">
+                            <p>Administrador - documentos</p>
+                        </div>
+                    </div>
+                    <h2 class="topicos-header">Unidades de disco rígido</h2>
+                    <div class="meu-pc-topicos">
+                        <div class="meu-pc-itens">
+                            <img class="imagem-grande" src="/img/9.ico" alt="">
+                            <p>Disco local (C:)</p>
+                        </div>
+                    </div>
+                    <h2 class="topicos-header">Dispositivos com armazenamento removível</h2>
+                    <div class="meu-pc-topicos">
+                        <div class="meu-pc-itens">
+                            <img class="imagem-grande" src="/img/7.ico" alt="">
+                            <p>Disquete de 3½ (A:)</p>
+                        </div>
+                        <div class="meu-pc-itens">
+                            <img class="imagem-grande" src="/img/12.ico" alt="">
+                            <p>Unidade de DVD-RAM (D:)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 
     <!-- MODAL - API GATOS -->
     <div id="modal-imagens" class="modal">
         <div class="modal-header">
             <div>
-                <img src="/img/Frame 1.png" alt="">
+                <img src="/img/JPG.png" alt="">
             </div>
             <div class="modal-header-botoes">
                 <a href="#">
@@ -266,31 +348,28 @@
     <div id="paint" class="modal">
         <div class="modal-header">
             <div style="width: 800px; display: flex; gap: 3px;">
-                <img id="paint-logo" src="/img/ms-paint.ico" alt="">
-                <h4>Paint</h4>
+                <img id="paint-logo" src="/img/Paint.png" alt="">
+                <h4>untitled - Paint</h4>
             </div>
             <div class="modal-header-botoes">
-                <a href="#">
-                    <img src="/img/botao-minimizar.png" alt="">
-                </a>
-                <a>
-                    <img src="/img/botao-maximizar-disabled.png" alt="">
-                </a>
-                <a href="#fechar" title="Fechar" class="fechar">
-                    <img src="/img/botao-fechar.png" alt="">
-                </a>
+                <a href="#"><img src="/img/botao-minimizar.png" alt=""></a>
+                <a><img src="/img/botao-maximizar-disabled.png" alt=""></a>
+                <a href="#fechar" title="Fechar" class="fechar"><img src="/img/botao-fechar.png" alt=""></a>
             </div>
         </div>
-        <iframe src="/paint/index.html" width="685" height="440"></iframe>
+        <iframe src="/paint/index.html" width="685" height="428"></iframe>
     </div>
 
     <!-- MODAL - MENU INICIAR -->
-     <div id="menu" class="modal">
+    <div id="menu" class="modal">
         <div id="menu-header">
-            <a href="#fechar" title="Fechar" class="fechar">X</a>
+            <div id="usuario">
+                <img id="usuario-perfil" src="/img/duck 1.png" alt="">
+                <h3 id="usuario-nome">Eliot</h3>
+            </div>
         </div>
         <div class="menu-principal">
-            <div class="esquerda">
+            <div class="menu-lado-esquerdo">
                 <a class="menu-item" href="#chrome">
                     <img class="menu-item-img" src="/img/Google_Chrome_icon.png" alt="">
                     <div>
@@ -298,7 +377,7 @@
                         <h6 class="texto-500 texto-cinza">Google Chrome</h6>
                     </div>
                 </a>
-                <a class="menu-item" href="#">
+                <a class="menu-item">
                     <img class="menu-item-img" src="/img/Outlook-Express-Icone.png" alt="">
                     <div>
                         <h6>Email</h6>
@@ -306,7 +385,7 @@
                     </div>
                 </a>
                 <span></span>
-                <a class="menu-item" href="#">
+                <a class="menu-item">
                     <img class="menu-item-img" src="/img/Microsoft-Excel.png" alt="">
                     <h6 class="texto-500">Microsoft Office Excel 2003</h6>
                 </a>
@@ -315,41 +394,41 @@
                     <h6 class="texto-500">Bloco de notas</h6>
                 </a>
                 <a class="menu-item" href="#paint">
-                    <img class="menu-item-img" src="/img/ms-paint.ico" alt="">
+                    <img class="menu-item-img" src="/img/Paint.png" alt="">
                     <h6 class="texto-500">Paint</h6>
                 </a>
-                <a class="menu-item" href="#">
-                    <img class="menu-item-img" src="/img/Icon_wmp.webp" alt="">
+                <a class="menu-item">
+                    <img class="menu-item-img" src="/img/Windows Media Player 10.png" alt="">
                     <h6 class="texto-500">Windows Media Player</h6>
                 </a>
-                <a class="menu-item" href="#">
+                <a class="menu-item">
                     <img class="menu-item-img" src="/img/Microsoft-Word.png" alt="">
                     <h6 class="texto-500">Microsoft Office Word 2003</h6>
                 </a>
-                <a class="menu-item" href="#">
-                    <img class="menu-item-img" src="/img/msn.ico" alt="">
+                <a class="menu-item">
+                    <img class="menu-item-img" src="/img/msn.png" alt="">
                     <h6 class="texto-500">Windows Live Messenger</h6>
                 </a>
                 <span></span>
-                <a id="menu-programas" class="menu-item" href="#">
+                <a id="menu-programas" class="menu-item">
                     <h6>Todos os programas</h6>
-                    <img class="menu-item-img" src="/img/poligono.png" alt="">
+                    <img class="menu-item-img" src="/img/246.ico" alt="">
                 </a>
             </div>
-            <div class="direita">
-                <a class="menu-item texto-azul" href="#">
+            <div class="menu-lado-direito">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/meus-documentos.ico" alt="">
                     <h6>Meus documentos</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/documentos-recentes.ico" alt="">
                     <h6>Documentos recentes</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/minhas-imagens.ico" alt="">
                     <h6>Minhas imagens</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/minhas-musicas.ico" alt="">
                     <h6>Minhas músicas</h6>
                 </a>
@@ -357,40 +436,50 @@
                     <img class="menu-item-img" src="/img/meu-computador.ico" alt="">
                     <h6>Meu computador</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/locais-de-rede.ico" alt="">
                     <h6>Meus locais de rede</h6>
                 </a>
                 <span></span>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/painel-de-controle.ico" alt="">
                     <h6 class="texto-500">Painel de controle</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
-                    <img class="menu-item-img" src="/img/padroes-programa.svg" alt="">
+                <a class="menu-item texto-azul">
+                    <img class="menu-item-img" src="/img/Default Programs.png" alt="">
                     <h6 class="texto-500">Definir acesso e padrões do programa</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/impressora-fax.ico" alt="">
                     <h6 class="texto-500">Impressoras e aparelhos de fax</h6>
                 </a>
                 <span></span>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/ajuda-e-suporte.ico" alt="">
                     <h6 class="texto-500">Ajuda e suporte</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/pesquisar.ico" alt="">
                     <h6 class="texto-500">Pesquisar</h6>
                 </a>
-                <a class="menu-item texto-azul" href="#">
+                <a class="menu-item texto-azul">
                     <img class="menu-item-img" src="/img/executar.ico" alt="">
                     <h6 class="texto-500">Executar...</h6>
                 </a>
             </div>
         </div>
-        <div id="menu-footer"></div>
-    </div> 
+        <div id="menu-footer">
+            <div class="span"></div>
+            <a href="#menu">
+                <img src="/img/Logout.png" alt="">
+                <p>Fazer logoff</p>
+            </a>
+            <a href="#menu">
+                <img src="/img/Power.png" alt="">
+                <p>Desligar o computador</p>
+            </a>
+        </div>
+    </div>
 
     <!-- MODAL - CHROME -->
     <div id="chrome" class="modal">
@@ -415,11 +504,8 @@
     </div>
 
     <script>
-
-
         const elementos = document.querySelectorAll("[draggable='true']");
         const celulas_disponiveis = document.querySelectorAll(".celula-disponivel");
-
 
         elementos.forEach((elemento) => {
             elemento.addEventListener("dragstart", comecar_arrastar);
@@ -433,27 +519,27 @@
         celulas_disponiveis.forEach((celula) => {
             celula.addEventListener("dragend", soltou_elemento);
         })
-        function soltou_elemento(){
+        function soltou_elemento() {
             this.classList.remove("celula-disponivel");
-            this.classList.add("celula-indisponivel");
+            this.classList.add("celula-");
             this.children[0].classList.remove("arrastando");
             //alert(this.children[0].className);
         }
         function saiu_soltar() {
             this.classList.add("celula-disponivel");
-            this.classList.remove("celula-indisponivel");
+            this.classList.remove("celula-");
             //let name = document.getElementById("myLI").parentNode.nodeName;
             this.classList.remove("arrastado");
         }
         function entrou_soltar() {
-            
-            if(this.children[0] == undefined){
+
+            if (this.children[0] == undefined) {
                 this.classList.add("arrastado");
 
                 const elemento_arrastado = document.querySelector(".arrastando");
 
                 this.appendChild(elemento_arrastado);
-            } 
+            }
         }
         function comecar_arrastar() {
             this.classList.add("arrastando");

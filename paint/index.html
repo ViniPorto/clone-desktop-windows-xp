@@ -6,89 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paint</title>
-    <style>
-        body {
-            background-color: #ECE7D6;
-            margin-right: 0;
-        }
-
-        #canvas {
-            border: 2.5px inset #888888;
-            margin: 5px 5px;
-            margin-right: 0;
-
-        }
-
-        #paleta {
-            display: grid;
-            grid-template-columns: repeat(2, 20px);
-            gap: 3px 7px;
-        }
-
-        #paleta>div {
-            border: 2px inset #afafaf;
-
-        }
-
-        #ferramentas {
-            float: left;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            margin-top: 5px;
-            gap: 5px;
-        }
-
-        input[type=range] {
-            display: block;
-            transform: rotate(90deg);
-            transform-origin: left 0;
-            position: absolute;
-            left: 28px;
-            top: 195px;
-            height: 8px;
-
-            border-radius: 5px;
-            background-color: #819ab8;
-            outline: none;
-        }
-
-        input[type='range'] {
-            cursor: pointer;
-        }
-
-        input[type='range'],
-        input[type='range']::-webkit-slider-runnable-track,
-        input[type='range']::-webkit-slider-thumb {
-            -webkit-appearance: none;
-        }
-
-        input[type=range]::-webkit-slider-thumb {
-            width: 15px;
-            height: 15px;
-            background-color: #185397;
-            border-radius: 3px;
-            border: 1.5px outset #123c6d;
-        }
-
-        span {
-            display: block;
-            width: 100%;
-            height: 2px;
-            margin: 3px auto;
-            border-bottom: 1px solid rgb(252, 246, 237);
-            background-color: #bebab1c0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
     <div id="ferramentas">
         <div style="display: flex;">
-            <div id="borracha" onclick="borracha()" style="background-image: url('/paint/borracha.png'); background-position: center; background-repeat: no-repeat; width: 25px; height: 25px;"></div>
             <div id="lapis" onclick="lapis()" style="background-image: url('/paint/pincel-lapis.png'); background-size: cover; width: 25px; height: 25px;"></div>
+            <div id="borracha" onclick="borracha()" style="background-image: url('/paint/borracha.png'); background-position: center; background-repeat: no-repeat; width: 25px; height: 25px;"></div>
         </div>
         <span></span>
         <div id="paleta">
