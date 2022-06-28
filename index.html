@@ -19,8 +19,8 @@
 <body>
     <div id="table">
         <!-- LINHA 1 -->
-        <div class="celula-indisponivel td">
-            <div draggable="true">
+        <div class="celula-disponivel td">
+            <div draggable="true" class="teste">
                 <a href="#meu-computador">
                     <img src="/img/My Computer.ico" alt="">
                     <p>Meu Computador</p>
@@ -41,7 +41,7 @@
         <div class="celula-disponivel td"></div>
 
         <!-- LINHA 2 -->
-        <div class="celula-indisponivel td">
+        <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#">
                     <img src="/img/Minesweeper.ico" alt="">
@@ -63,7 +63,7 @@
         <div class="celula-disponivel td"></div>
 
         <!-- LINHA 3 -->
-        <div class="celula-indisponivel td">
+        <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#modal-imagens" id="link-api-gatos">
                     <img src="/img/Frame 1.png" alt="">
@@ -85,7 +85,7 @@
         <div class="celula-disponivel td"></div>
 
         <!-- LINHA 4 -->
-        <div class="celula-indisponivel td">
+        <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#pong">
                     <img src="/img/pong-logo.png" alt="">
@@ -107,7 +107,7 @@
         <div class="celula-disponivel td"></div>
 
         <!-- LINHA 5  -->
-        <div class="celula-indisponivel td">
+        <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#abrirModal">
                     <img src="/img/Recycle-Bin.png" alt="">
@@ -129,7 +129,7 @@
         <div class="celula-disponivel td"></div>
 
         <!-- LINHA 6 -->
-        <div class="celula-indisponivel td">
+        <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#paint">
                     <img src="/img/ms-paint.ico" alt="">
@@ -152,7 +152,7 @@
     </div>
 
     <div id="barraDeTarefas">
-        <a href="#menu">
+        <a href="#menu" onclick="carregar_menu()">
             <div id="menu-iniciar">
                 <img id="menu-iniciar-start" src="/img/menu.png" alt="">
             </div>
@@ -285,7 +285,7 @@
     </div>
 
     <!-- MODAL - MENU INICIAR -->
-    <div id="menu" class="modal">
+     <div id="menu" class="modal">
         <div id="menu-header">
             <a href="#fechar" title="Fechar" class="fechar">X</a>
         </div>
@@ -390,7 +390,7 @@
             </div>
         </div>
         <div id="menu-footer"></div>
-    </div>
+    </div> 
 
     <!-- MODAL - CHROME -->
     <div id="chrome" class="modal">
@@ -415,38 +415,49 @@
     </div>
 
     <script>
+
+
         const elementos = document.querySelectorAll("[draggable='true']");
         const celulas_disponiveis = document.querySelectorAll(".celula-disponivel");
+
 
         elementos.forEach((elemento) => {
             elemento.addEventListener("dragstart", comecar_arrastar);
         })
-
         celulas_disponiveis.forEach((celula) => {
             celula.addEventListener("dragover", entrou_soltar);
         })
         celulas_disponiveis.forEach((celula) => {
             celula.addEventListener("dragleave", saiu_soltar);
         })
-
+        celulas_disponiveis.forEach((celula) => {
+            celula.addEventListener("dragend", soltou_elemento);
+        })
+        function soltou_elemento(){
+            this.classList.remove("celula-disponivel");
+            this.classList.add("celula-indisponivel");
+            this.children[0].classList.remove("arrastando");
+            //alert(this.children[0].className);
+        }
         function saiu_soltar() {
+            this.classList.add("celula-disponivel");
+            this.classList.remove("celula-indisponivel");
+            //let name = document.getElementById("myLI").parentNode.nodeName;
             this.classList.remove("arrastado");
         }
-
         function entrou_soltar() {
-            this.classList.add("arrastado");
+            
+            if(this.children[0] == undefined){
+                this.classList.add("arrastado");
 
-            const elemento_arrastado = document.querySelector(".arrastando");
+                const elemento_arrastado = document.querySelector(".arrastando");
 
-            this.appendChild(elemento_arrastado);
-
-
+                this.appendChild(elemento_arrastado);
+            } 
         }
-
         function comecar_arrastar() {
             this.classList.add("arrastando");
         }
-
         function atualizaRelogio() {
             var momentoAtual = new Date();
 
