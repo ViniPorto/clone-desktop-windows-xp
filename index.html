@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
         <div class="celula-disponivel td">
             <div draggable="true" class="teste">
                 <a href="#meu-computador">
-                    <img src="/img/My Computer.ico" alt="">
+                    <img width="80" src="/img/My Computer.ico" alt="">
                     <p>Meu Computador</p>
                 </a>
             </div>
@@ -44,7 +44,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#">
-                    <img src="/img/Minesweeper.ico" alt="">
+                    <img width="80" src="/img/Minesweeper.ico" alt="">
                     <p>Campo Minado</p>
                 </a>
             </div>
@@ -66,7 +66,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#modal-imagens" id="link-api-gatos">
-                    <img src="/img/JPG.png" alt="">
+                    <img width="80" src="/img/JPG.png" alt="">
                     <p>gatos.jpg</p>
                 </a>
             </div>
@@ -88,7 +88,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#pong">
-                    <img src="/img/pong-logo.png" alt="">
+                    <img width="80" src="/img/pong-logo.png" alt="">
                     <p>Pong</p>
                 </a>
             </div>
@@ -110,7 +110,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#">
-                    <img src="/img/Recycle-Bin.png" alt="">
+                    <img width="80" src="/img/Recycle-Bin.png" alt="">
                     <p>Lixeira</p>
                 </a>
             </div>
@@ -132,7 +132,7 @@
         <div class="celula-disponivel td">
             <div draggable="true">
                 <a href="#paint">
-                    <img src="/img/Paint.png" alt="">
+                    <img width="80" src="/img/Paint.png" alt="">
                     <p>Paint</p>
                 </a>
             </div>
@@ -153,10 +153,10 @@
 
     <div id="barraDeTarefas">
         <a href="#menu" onclick="carregar_menu()">
-            <div id="menu-iniciar"><img id="menu-iniciar-start" src="/img/menu.png" alt=""></div>
+            <div id="menu-iniciar"><img width="100" id="menu-iniciar-start" src="/img/menu.png" alt=""></div>
         </a>
         <div id="barra-lateral">
-            <a href="#"><img id="icone-som" src="/img/Sounds, Speech, and Audio Devices.ico" alt=""></a>
+            <a href="#"><img id="icone-som" src="/img/Volume.png" alt=""></a>
             <a href=""><output id="hora"></output></a>
         </div>
     </div>
@@ -185,18 +185,17 @@
             <img style="background-color: #ffffff; padding: 0 10px; margin-left: auto;" class="imagem-media" src="/img/logo windows.png" alt="">
         </ul>
         <div>
-            <div id="navegacao" style="display: flex; align-items: center; gap: 2vh; background-color: #F1EFE1; border-bottom: 2px solid #DEDED2;padding: 1vh;">
-                <img class="imagem-media" src="/img/Back.png" alt="">
-                <img src="/img/seta-pra-baixo.svg" alt="">
-                <img class="imagem-media" src="/img/Forward.png" alt="">
-                <img src="/img/seta-pra-baixo.svg" alt="">
-                <img class="imagem-media" src="/img/Up.png" alt="">
-                <img class="imagem-media" src="/img/pesquisar.ico" alt="">
-                <img class="imagem-media" src="/img/pastas-abertas.png" alt="">
-                <img class="imagem-media" src="/img/Icon View.png" alt="">
-                <img src="/img/seta-pra-baixo.svg" alt="">
-
-            </div>
+            <ul id="navegacao">
+                <li><img class="imagem-media" src="/img/Back.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="/img/seta-pra-baixo.svg" alt="">
+                <li><img class="imagem-media" src="/img/Forward.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="/img/seta-pra-baixo.svg" alt="">
+                <li><img class="imagem-media" src="/img/Up.png" alt=""></li>
+                <li><img class="imagem-media" src="/img/pesquisar.ico" alt=""></li>
+                <li><img class="imagem-media" src="/img/pastas-abertas.png" alt=""></li>
+                <li><img class="imagem-media" src="/img/Icon View.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="/img/seta-pra-baixo.svg" alt="">
+            </ul>
             <div id="meu-pc-endereco">
                 <h4 style="font-size: 1.2vw;font-weight: normal;">E<ins>n</ins>dereço</h4>
                 <div id="endereco-link">
@@ -209,27 +208,25 @@
             </div>
             <div id="meu-pc-grid">
                 <section id="meu-pc-grid-atalhos">
-                    <div class="atalhos-sections">
-                        <ul>
-                            <li class="atalhos-header">
-                                <h2>Tarefas do sistema</h2>
-                                <img width="20" src="/img/setas-duplas.svg" alt="">
-                            </li>
+                    <ul class="atalhos-sections">
+                        <li class="atalhos-header">
+                            <h2>Tarefas do sistema</h2>
+                            <img width="20" src="/img/setas-duplas.svg" alt="">
+                        </li>
 
-                            <li class="atalhos-pastas">
-                                <img class="mini-imagens" src="/img/253.ico" alt="">
-                                <p>Exibir informações do sistema</p>
-                            </li>
-                            <li class="atalhos-pastas">
-                                <img class="mini-imagens" src="/img/Programs.png" alt="">
-                                <p>Adicionar ou remover programas</p>
-                            </li>
-                            <li class="atalhos-pastas">
-                                <img class="mini-imagens" src="/img/painel-de-controle.ico" alt="">
-                                <p>Alterar uma configuração</p>
-                            </li>
-                        </ul>
-                    </div>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/253.ico" alt="">
+                            <p>Exibir informações do sistema</p>
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/Programs.png" alt="">
+                            <p>Adicionar ou remover programas</p>
+                        </li>
+                        <li class="atalhos-pastas">
+                            <img class="mini-imagens" src="/img/painel-de-controle.ico" alt="">
+                            <p>Alterar uma configuração</p>
+                        </li>
+                    </ul>
                     <ul class="atalhos-sections">
                         <li class="atalhos-header">
                             <h2>Outros locais</h2>
@@ -252,7 +249,6 @@
                             <p>Painel de controle</p>
                         </li>
                     </ul>
-
                     <ul class="atalhos-sections">
                         <li class="atalhos-header">
                             <h2>Detalhes</h2>
@@ -364,118 +360,118 @@
     <div id="menu" class="modal">
         <div id="menu-header">
             <div id="usuario">
-                <img id="usuario-perfil" src="/img/duck 1.png" alt="">
+                <img width="40" id="usuario-perfil" src="/img/duck 1.png" alt="">
                 <h3 id="usuario-nome">Eliot</h3>
             </div>
         </div>
         <div class="menu-principal">
-            <div class="menu-lado-esquerdo">
-                <a class="menu-item" href="#chrome">
-                    <img class="menu-item-img" src="/img/Google_Chrome_icon.png" alt="">
+            <ul class="menu-lado-esquerdo">
+                <li class="menu-item" href="#chrome">
+                    <img width="40" class="menu-item-img" src="/img/Google_Chrome_icon.png" alt="">
                     <div>
                         <h6>Internet</h6>
                         <h6 class="texto-500 texto-cinza">Google Chrome</h6>
                     </div>
-                </a>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/Outlook-Express-Icone.png" alt="">
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/Outlook-Express-Icone.png" alt="">
                     <div>
                         <h6>Email</h6>
                         <h6 class="texto-500 texto-cinza">Outlook Express</h6>
                     </div>
-                </a>
+                </li>
                 <span></span>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/Microsoft-Excel.png" alt="">
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/Microsoft-Excel.png" alt="">
                     <h6 class="texto-500">Microsoft Office Excel 2003</h6>
-                </a>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/bloco-de-notas.png" alt="">
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/bloco-de-notas.png" alt="">
                     <h6 class="texto-500">Bloco de notas</h6>
-                </a>
-                <a class="menu-item" href="#paint">
-                    <img class="menu-item-img" src="/img/Paint.png" alt="">
+                </li>
+                <li class="menu-item" href="#paint">
+                    <img width="40" class="menu-item-img" src="/img/Paint.png" alt="">
                     <h6 class="texto-500">Paint</h6>
-                </a>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/Windows Media Player 10.png" alt="">
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/Windows Media Player 10.png" alt="">
                     <h6 class="texto-500">Windows Media Player</h6>
-                </a>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/Microsoft-Word.png" alt="">
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/Microsoft-Word.png" alt="">
                     <h6 class="texto-500">Microsoft Office Word 2003</h6>
-                </a>
-                <a class="menu-item">
-                    <img class="menu-item-img" src="/img/msn.png" alt="">
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="/img/msn.png" alt="">
                     <h6 class="texto-500">Windows Live Messenger</h6>
-                </a>
+                </li>
                 <span></span>
-                <a id="menu-programas" class="menu-item">
+                <li id="menu-programas" class="menu-item">
                     <h6>Todos os programas</h6>
-                    <img class="menu-item-img" src="/img/246.ico" alt="">
-                </a>
-            </div>
-            <div class="menu-lado-direito">
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/meus-documentos.ico" alt="">
+                    <img width="40" class="menu-item-img" src="/img/246.ico" alt="">
+                </li>
+            </ul>
+            <ul class="menu-lado-direito">
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/meus-documentos.ico" alt="">
                     <h6>Meus documentos</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/documentos-recentes.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/documentos-recentes.ico" alt="">
                     <h6>Documentos recentes</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/minhas-imagens.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/minhas-imagens.ico" alt="">
                     <h6>Minhas imagens</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/minhas-musicas.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/minhas-musicas.ico" alt="">
                     <h6>Minhas músicas</h6>
-                </a>
-                <a class="menu-item texto-azul" href="#meu-computador">
-                    <img class="menu-item-img" src="/img/meu-computador.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul" href="#meu-computador">
+                    <img width="40" class="menu-item-img" src="/img/meu-computador.ico" alt="">
                     <h6>Meu computador</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/locais-de-rede.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/locais-de-rede.ico" alt="">
                     <h6>Meus locais de rede</h6>
-                </a>
+                </li>
                 <span></span>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/painel-de-controle.ico" alt="">
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/painel-de-controle.ico" alt="">
                     <h6 class="texto-500">Painel de controle</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/Default Programs.png" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/Default Programs.png" alt="">
                     <h6 class="texto-500">Definir acesso e padrões do programa</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/impressora-fax.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/impressora-fax.ico" alt="">
                     <h6 class="texto-500">Impressoras e aparelhos de fax</h6>
-                </a>
+                </li>
                 <span></span>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/ajuda-e-suporte.ico" alt="">
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/ajuda-e-suporte.ico" alt="">
                     <h6 class="texto-500">Ajuda e suporte</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/pesquisar.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/pesquisar.ico" alt="">
                     <h6 class="texto-500">Pesquisar</h6>
-                </a>
-                <a class="menu-item texto-azul">
-                    <img class="menu-item-img" src="/img/executar.ico" alt="">
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="/img/executar.ico" alt="">
                     <h6 class="texto-500">Executar...</h6>
-                </a>
-            </div>
+                </li>
+            </ul>
         </div>
         <div id="menu-footer">
             <div class="span"></div>
             <a href="#menu">
-                <img src="/img/Logout.png" alt="">
+                <img width="40" src="/img/Logout.png" alt="">
                 <p>Fazer logoff</p>
             </a>
             <a href="#menu">
-                <img src="/img/Power.png" alt="">
+                <img width="40" src="/img/Power.png" alt="">
                 <p>Desligar o computador</p>
             </a>
         </div>

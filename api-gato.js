@@ -11,7 +11,6 @@ const limpar_dados_api_gato = () => {
   document.getElementById("imagens-api-gato").src = "";
 };
 
-// prettier ignore
 document.getElementById("link-api-gatos").addEventListener("click", gatos);
 document
   .getElementById("botao-fechar-imagem-gato")
