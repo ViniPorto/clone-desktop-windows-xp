@@ -12,8 +12,8 @@
 <body>
     <div id="ferramentas">
         <div style="display: flex;">
-            <div id="lapis" onclick="lapis()" style="background-image: url('/paint/pincel-lapis.png'); background-size: cover; width: 25px; height: 25px;"></div>
-            <div id="borracha" onclick="borracha()" style="background-image: url('/paint/borracha.png'); background-position: center; background-repeat: no-repeat; width: 25px; height: 25px;"></div>
+            <div id="lapis" onclick="lapis()" style="background-image: url('pincel-lapis.png'); background-size: cover; width: 25px; height: 25px;"></div>
+            <div id="borracha" onclick="borracha()" style="background-image: url('borracha.png'); background-position: center; background-repeat: no-repeat; width: 25px; height: 25px;"></div>
         </div>
         <span></span>
         <div id="paleta">
@@ -40,7 +40,7 @@
         var pincel = tela.getContext('2d');
         var ultimaCor = 'black';
 
-        document.getElementById("canvas").style.cssText = 'cursor: url(/paint/lapis.png), default';
+        document.getElementById("canvas").style.cssText = 'cursor: url(lapis.png), default';
 
         pincel.fillStyle = 'white';
         pincel.fillRect(0, 0, 600, 400);
@@ -71,7 +71,7 @@
         }
 
         function mudaCor(numero) {
-            document.getElementById("canvas").style.cssText = 'cursor: url(/paint/lapis.png), default';
+            document.getElementById("canvas").style.cssText = 'cursor: url(lapis.png), default';
             indiceCorAtual = numero;
             ultimaCor = numero;
 
@@ -79,12 +79,12 @@
         }
 
         function borracha() {
-            document.getElementById("canvas").style.cssText = 'cursor: url(/paint/quadrado.png) 10 10, default';
+            document.getElementById("canvas").style.cssText = 'cursor: url(quadrado.png) 10 10, default';
             indiceCorAtual = 1;
         }
 
         function lapis() {
-            document.getElementById("canvas").style.cssText = 'cursor: url(/paint/lapis.png), default';
+            document.getElementById("canvas").style.cssText = 'cursor: url(lapis.png), default';
             indiceCorAtual = ultimaCor;
         }
 

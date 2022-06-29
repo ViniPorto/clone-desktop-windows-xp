@@ -493,7 +493,7 @@ body .modal-header {
   content: "";
   width: 1.5vw;
   height: 1.5vw;
-  background-image: url(/img/Monitor.ico);
+  background-image: url(img/Monitor.ico);
   background-size: cover;
   position: relative;
   display: inline-block;
@@ -513,7 +513,7 @@ body .modal-header {
   content: "";
   width: 2vw;
   height: 2vw;
-  background-image: url(/img/Go.png);
+  background-image: url(img/Go.png);
   background-size: cover;
   position: relative;
   display: inline-block;
