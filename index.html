@@ -21,7 +21,7 @@
         <!-- LINHA 1 -->
         <div class="celula-disponivel td">
             <div draggable="true" class="teste">
-                <a href="#meu-computador">
+                <a href="#meu-computador" onclick="adicionar_elemento_barra_de_tarefas(1)">
                     <img width="80" src="img/My Computer.ico" alt="">
                     <p>Meu Computador</p>
                 </a>
@@ -43,7 +43,7 @@
         <!-- LINHA 2 -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#">
+                <a href="#" onclick="adicionar_elemento_barra_de_tarefas(2)">
                     <img width="80" src="img/Minesweeper.ico" alt="">
                     <p>Campo Minado</p>
                 </a>
@@ -65,7 +65,7 @@
         <!-- LINHA 3 -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#modal-imagens" id="link-api-gatos">
+                <a href="#modal-imagens" id="link-api-gatos" onclick="adicionar_elemento_barra_de_tarefas(3)">
                     <img width="80" src="img/JPG.png" alt="">
                     <p>gatos.jpg</p>
                 </a>
@@ -87,7 +87,7 @@
         <!-- LINHA 4 -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#pong" onclick="inserir_pong()">
+                <a href="#pong" onclick="inserir_pong(), adicionar_elemento_barra_de_tarefas(4)">
                     <img width="80" src="img/pong-logo.png" alt="">
                     <p>Pong</p>
                 </a>
@@ -109,7 +109,7 @@
         <!-- LINHA 5  -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#">
+                <a href="#" onclick="adicionar_elemento_barra_de_tarefas(5)">
                     <img width="80" src="img/Recycle-Bin.png" alt="">
                     <p>Lixeira</p>
                 </a>
@@ -131,7 +131,7 @@
         <!-- LINHA 6 -->
         <div class="celula-disponivel td">
             <div draggable="true">
-                <a href="#paint">
+                <a href="#paint" onclick="adicionar_elemento_barra_de_tarefas(6)">
                     <img width="80" src="img/Paint.png" alt="">
                     <p>Paint</p>
                 </a>
@@ -152,7 +152,7 @@
     </div>
 
     <div id="barraDeTarefas">
-        <a href="#menu" onclick="inserir_menu_iniciar()">
+        <a href="#menu" onclick="inserir_menu_iniciar()" id="menu-iniciar-id">
             <div id="menu-iniciar"><img width="100" id="menu-iniciar-start" src="img/menu.png" alt=""></div>
         </a>
         <div id="barra-lateral">
@@ -355,127 +355,6 @@
         <iframe src="paint/index.html" width="685" height="428"></iframe>
     </div>
 
-    <!-- MODAL - MENU INICIAR -->
-    <!-- <div id="menu" class="modal">
-        <div id="menu-header">
-            <div id="usuario">
-                <img width="40" id="usuario-perfil" src="img/duck 1.png" alt="">
-                <h3 id="usuario-nome">Eliot</h3>
-            </div>
-        </div>
-        <div class="menu-principal">
-            <ul class="menu-lado-esquerdo">
-                <li class="menu-item" href="#chrome">
-                    <img width="40" class="menu-item-img" src="img/Google_Chrome_icon.png" alt="">
-                    <div>
-                        <h6>Internet</h6>
-                        <h6 class="texto-500 texto-cinza">Google Chrome</h6>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/Outlook-Express-Icone.png" alt="">
-                    <div>
-                        <h6>Email</h6>
-                        <h6 class="texto-500 texto-cinza">Outlook Express</h6>
-                    </div>
-                </li>
-                <span></span>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/Microsoft-Excel.png" alt="">
-                    <h6 class="texto-500">Microsoft Office Excel 2003</h6>
-                </li>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/bloco-de-notas.png" alt="">
-                    <h6 class="texto-500">Bloco de notas</h6>
-                </li>
-                <li class="menu-item" href="#paint">
-                    <img width="40" class="menu-item-img" src="img/Paint.png" alt="">
-                    <h6 class="texto-500">Paint</h6>
-                </li>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/Windows Media Player 10.png" alt="">
-                    <h6 class="texto-500">Windows Media Player</h6>
-                </li>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/Microsoft-Word.png" alt="">
-                    <h6 class="texto-500">Microsoft Office Word 2003</h6>
-                </li>
-                <li class="menu-item">
-                    <img width="40" class="menu-item-img" src="img/msn.png" alt="">
-                    <h6 class="texto-500">Windows Live Messenger</h6>
-                </li>
-                <span></span>
-                <li id="menu-programas" class="menu-item">
-                    <h6>Todos os programas</h6>
-                    <img width="40" class="menu-item-img" src="img/246.ico" alt="">
-                </li>
-            </ul>
-            <ul class="menu-lado-direito">
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/meus-documentos.ico" alt="">
-                    <h6>Meus documentos</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/documentos-recentes.ico" alt="">
-                    <h6>Documentos recentes</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/minhas-imagens.ico" alt="">
-                    <h6>Minhas imagens</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/minhas-musicas.ico" alt="">
-                    <h6>Minhas músicas</h6>
-                </li>
-                <li class="menu-item texto-azul" href="#meu-computador">
-                    <img width="40" class="menu-item-img" src="img/meu-computador.ico" alt="">
-                    <h6>Meu computador</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/locais-de-rede.ico" alt="">
-                    <h6>Meus locais de rede</h6>
-                </li>
-                <span></span>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/painel-de-controle.ico" alt="">
-                    <h6 class="texto-500">Painel de controle</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/Default Programs.png" alt="">
-                    <h6 class="texto-500">Definir acesso e padrões do programa</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/impressora-fax.ico" alt="">
-                    <h6 class="texto-500">Impressoras e aparelhos de fax</h6>
-                </li>
-                <span></span>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/ajuda-e-suporte.ico" alt="">
-                    <h6 class="texto-500">Ajuda e suporte</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/pesquisar.ico" alt="">
-                    <h6 class="texto-500">Pesquisar</h6>
-                </li>
-                <li class="menu-item texto-azul">
-                    <img width="40" class="menu-item-img" src="img/executar.ico" alt="">
-                    <h6 class="texto-500">Executar...</h6>
-                </li>
-            </ul>
-        </div>
-        <div id="menu-footer">
-            <div class="span"></div>
-            <a href="#menu">
-                <img width="40" src="img/Logout.png" alt="">
-                <p>Fazer logoff</p>
-            </a>
-            <a href="#menu">
-                <img width="40" src="img/Power.png" alt="">
-                <p>Desligar o computador</p>
-            </a>
-        </div>
-    </div> -->
-
     <!-- MODAL - CHROME -->
     <div id="chrome" class="modal">
         <div class="modal-header">
@@ -499,6 +378,9 @@
     </div>
 
     <script>
+        
+
+
         const elementos = document.querySelectorAll("[draggable='true']");
         const celulas_disponiveis = document.querySelectorAll(".celula-disponivel");
     
@@ -507,12 +389,6 @@
         })
         celulas_disponiveis.forEach((celula) => {
             celula.addEventListener("dragover", entrou_soltar);
-            celula.addEventListener("click", () => {
-                const desktop = document.getElementById("desktop");
-                const menu_iniciar = document.getElementById("menu");
-                menu_iniciar.remove(menu_iniciar);
-                console.log("OPA");
-            });
         })
         celulas_disponiveis.forEach((celula) => {
             celula.addEventListener("dragleave", saiu_soltar);
@@ -693,8 +569,39 @@
             </a>
         </div>
     </div>`);
+        const menu = document.getElementById("desktop");
+        menu.addEventListener("click", () => {
+            const menu_iniciar = document.getElementById("menu");
+            menu_iniciar.remove(menu_iniciar);
+            console.log("OPA");
+            window.location.href = "http://127.0.0.1:5500/index.html";
+        })
         }
-        
+        function adicionar_elemento_barra_de_tarefas(num){
+            const botao = document.getElementById("menu-iniciar-id");
+            const caixa_barra = document.createElement("div");
+            caixa_barra.classList.add("caixa-barra"); //div adicionada ao lado do botao iniciar, ja adiciona com a classe "caixa-barra"
+
+            
+            // ** MUDAR AQUI **
+            
+            
+            if(num == 1){ //variavel num vem por parametro, nos links dos programas ele chama essa função passando por parametro um numero, cada um passa um numero diferente, ai de acordo com o numero sabemos qual programa abriu, ai da pra saber se coloca o icone do paint, pong, etc
+                console.log("meu computador"); //caixa_barra.innerHTML += `<img src="imagem/meu computador">`
+            }else if(num == 2){
+                console.log("campo minado"); //caixa_barra.innerHTML += `<img src="imagem/campo minado">`
+            }else if(num == 3){
+                console.log("gatos"); //caixa_barra.innerHTML += `<img src="imagem/gatos">`
+            }else if(num == 4){
+                console.log("PONG"); //caixa_barra.innerHTML += `<img src="imagem/pong">`
+            }else if(num == 5){
+                console.log("lixeira"); //caixa_barra.innerHTML += `<img src="imagem/lixeira">`
+            }else if(num == 6){
+                caixa_barra.innerHTML += `<img src="paint/borracha.png">`; //alterar HTML, aqui deve ser o conteúdo da caixinha que abre (imagem com o icone do programa + nome do programa + bordinha igual ao windows)
+            }
+            
+            botao.after(caixa_barra); //este método insere a caixinha depois do botao INICIAR da barra de tarefas
+        }
 
     </script>
     <script src="api-gato.js"></script>
