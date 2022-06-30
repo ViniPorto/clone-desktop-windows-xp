@@ -61,6 +61,7 @@ ul li {
   border: 2px solid #1c4ecb;
   border-radius: 5px 5px 0 0;
   background-color: #ffffff;
+  max-height: 95vh;
 }
 
 .modal:target {
@@ -647,4 +648,9 @@ body .modal-header {
 
 .caixa-barra img {
   height: 3vh;
+}
+
+#chrome iframe {
+  height: 94%;
+  width: 99.8%;
 }

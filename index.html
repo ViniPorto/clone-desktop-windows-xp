@@ -42,10 +42,10 @@
 
         <!-- LINHA 2 -->
         <div class="celula-disponivel td" id="14">
-            <div draggable="true" id="campo-minado-id">
+            <div draggable="true" id="calculadora-id">
                 <a href="#" onclick="adicionar_elemento_barra_de_tarefas(2)">
-                    <img src="./img/Minesweeper.ico" alt="">
-                    <p>Campo Minado</p>
+                    <img src="./img/calc.ico" alt="">
+                    <p>Calculadora</p>
                 </a>
             </div>
         </div>
@@ -108,10 +108,10 @@
 
         <!-- LINHA 5  -->
         <div class="celula-disponivel td" id="53">
-            <div draggable="true" id="lixeira-id">
-                <a href="#" onclick="adicionar_elemento_barra_de_tarefas(5)">
-                    <img src="./img/Recycle-Bin.png" alt="">
-                    <p>Lixeira</p>
+            <div draggable="true" id="chrome-id">
+                <a href="#chrome" onclick="adicionar_elemento_barra_de_tarefas(5)">
+                    <img src="./img/Google_Chrome_icon.png" alt="">
+                    <p>Chrome</p>
                 </a>
             </div>
         </div>
@@ -360,7 +360,7 @@
     <div id="chrome" class="modal">
         <div class="modal-header">
             <div style="width: 800px; display: flex; gap: 3px;">
-                <img src="" alt="">
+                <img src="./img/Google_Chrome_icon.png" alt="">
                 <h4>Google Chrome</h4>
             </div>
             <div class="header-botoes">
@@ -401,7 +401,7 @@
             this.children[0].classList.remove("arrastando");
             localStorage.setItem(this.children[0].id, this.id); //para salvar a config do desktop
             // console.log(this.id);
-            // console.log(localStorage.getItem("campo-minado-id"));
+            // console.log(localStorage.getItem("calculadora-id"));
             // console.log(this.children[0].id);
 
             //alert(this.children[0].className);
@@ -589,18 +589,16 @@
 
 
             if (num == 1) { //variavel "num" vem por parametro, nos links dos programas ele chama essa função passando por parametro um numero, cada um passa um numero diferente, ai de acordo com o numero sabemos qual programa abriu, ai da pra saber se coloca o icone do paint, pong, etc
-                console.log("meu computador");
                 caixa_barra.innerHTML += `<img src="./img/monitor.ico"><p>Meu Computador</p>`
             } else if (num == 2) {
-                console.log("campo minado"); 
+                caixa_barra.innerHTML += `<img src="./img/calc.ico"><p>Calculadora</p>`
+                console.log("calculadora"); 
             } else if (num == 3) {
-                console.log("gatos");
                 caixa_barra.innerHTML += `<img src="./img/JPG.png"><p>Visualizador de imagens</p>`
             } else if (num == 4) {
-                console.log("PONG");
                 caixa_barra.innerHTML += `<img src="./img/pong-logo.png"><p>Pong</p>`
             } else if (num == 5) {
-                console.log("lixeira"); 
+                caixa_barra.innerHTML += `<img src="./img/Google_Chrome_icon.png"><p>Chrome</p>`; 
             } else if (num == 6) {
                 caixa_barra.innerHTML += `<img src="./img/Paint.png"><p>Paint</p>`; 
             }
@@ -617,10 +615,10 @@
             if(localStorage.length == 0){
                 //inicializar localização dos icones
                 localStorage.setItem("meu-computador-id", 1); 
-                localStorage.setItem("campo-minado-id", 14); 
+                localStorage.setItem("calculadora-id", 14); 
                 localStorage.setItem("gatos-id", 27); 
                 localStorage.setItem("pong-id", 40); 
-                localStorage.setItem("lixeira-id", 53); 
+                localStorage.setItem("chrome-id", 53); 
                 localStorage.setItem("paint-id", 66); 
             }
             Object.keys(localStorage).forEach((key) => {
