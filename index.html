@@ -370,7 +370,7 @@
                 <a href="#">
                     <img src="./img/botao-maximizar.png" alt="">
                 </a>
-                <a href="#fechar" title="Fechar" class="fechar">
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()"> 
                     <img src="./img/botao-fechar.png" alt="">
                 </a>
             </div>
@@ -578,7 +578,7 @@
                 const menu_iniciar = document.getElementById("menu");
                 menu_iniciar.remove(menu_iniciar);
                 console.log("OPA");
-                window.location.href = "file:///C:/Users/vinicius.porto/Desktop/clone-desktop-windows-xp/index.html"; //"http://127.0.0.1:5500/index.html"; //alterar aqui para upar no github
+                window.location.href = "http://127.0.0.1:5500/index.html"; //"file:///C:/Users/vinicius.porto/Desktop/clone-desktop-windows-xp/index.html"; //alterar aqui para upar no github
             })
         }
         function adicionar_elemento_barra_de_tarefas(num) {
@@ -623,6 +623,7 @@
             }
             Object.keys(localStorage).forEach((key) => {
                 const elemento_desktop = document.getElementById(`${key}`);
+                console.log(elemento_desktop);
                 const div_elemento = elemento_desktop.parentNode;
                 div_elemento.removeChild(elemento_desktop);
                 const nova_div_elemento = document.getElementById(`${localStorage.getItem(key)}`);
@@ -632,5 +633,4 @@
     </script>
     <script src="api-gato.js"></script>
 </body>
-
 </html>
