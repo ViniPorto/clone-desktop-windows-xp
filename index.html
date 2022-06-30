@@ -43,7 +43,7 @@
         <!-- LINHA 2 -->
         <div class="celula-disponivel td" id="14">
             <div draggable="true" id="calculadora-id">
-                <a href="#" onclick="adicionar_elemento_barra_de_tarefas(2)">
+                <a href="#calculadora" onclick="adicionar_elemento_barra_de_tarefas(2)">
                     <img src="./img/calc.ico" alt="">
                     <p>Calculadora</p>
                 </a>
@@ -370,13 +370,36 @@
                 <a href="#">
                     <img src="./img/botao-maximizar.png" alt="">
                 </a>
-                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()"> 
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()">
                     <img src="./img/botao-fechar.png" alt="">
                 </a>
             </div>
         </div>
         <iframe src="https://www.bing.com/?cc=br" width="1280" height="768"></iframe>
-    </div> 
+    </div>
+
+    <!-- MODAL - CALCULADORA -->
+    <!-- TEMPLATE MODAL -->
+    <div id="calculadora" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="calculadora-icone" src="./img/calc.ico" alt="">
+                <h4>Calculadora</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#">
+                    <img src="/img/botao-minimizar.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="/img/botao-maximizar-disabled.png" alt="">
+                </a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()">
+                    <img src="/img/botao-fechar.png" alt="">
+                </a>
+            </div>
+        </div>
+        <iframe src="./calculadora/index.html" width="240" height="316"></iframe>
+    </div>
 
     <script>
 
@@ -592,34 +615,33 @@
                 caixa_barra.innerHTML += `<img src="./img/monitor.ico"><p>Meu Computador</p>`
             } else if (num == 2) {
                 caixa_barra.innerHTML += `<img src="./img/calc.ico"><p>Calculadora</p>`
-                console.log("calculadora"); 
             } else if (num == 3) {
                 caixa_barra.innerHTML += `<img src="./img/JPG.png"><p>Visualizador de imagens</p>`
             } else if (num == 4) {
                 caixa_barra.innerHTML += `<img src="./img/pong-logo.png"><p>Pong</p>`
             } else if (num == 5) {
-                caixa_barra.innerHTML += `<img src="./img/Google_Chrome_icon.png"><p>Chrome</p>`; 
+                caixa_barra.innerHTML += `<img src="./img/Google_Chrome_icon.png"><p>Chrome</p>`;
             } else if (num == 6) {
-                caixa_barra.innerHTML += `<img src="./img/Paint.png"><p>Paint</p>`; 
+                caixa_barra.innerHTML += `<img src="./img/Paint.png"><p>Paint</p>`;
             }
 
             botao.after(caixa_barra); //este método insere a caixinha depois do botao INICIAR da barra de tarefas
         }
-        function retirar_elemento_barra_de_tarefas(){
+        function retirar_elemento_barra_de_tarefas() {
             const elemento_barra_de_tarefas = document.getElementById("elemento-barra-de-tarefas");
             elemento_barra_de_tarefas.remove(elemento_barra_de_tarefas);
         }
 
         //para carregar a área de trabalho no estado em que se encontrava anteriormente
         window.onload = () => {
-            if(localStorage.length == 0){
+            if (localStorage.length == 0) {
                 //inicializar localização dos icones
-                localStorage.setItem("meu-computador-id", 1); 
-                localStorage.setItem("calculadora-id", 14); 
-                localStorage.setItem("gatos-id", 27); 
-                localStorage.setItem("pong-id", 40); 
-                localStorage.setItem("chrome-id", 53); 
-                localStorage.setItem("paint-id", 66); 
+                localStorage.setItem("meu-computador-id", 1);
+                localStorage.setItem("calculadora-id", 14);
+                localStorage.setItem("gatos-id", 27);
+                localStorage.setItem("pong-id", 40);
+                localStorage.setItem("chrome-id", 53);
+                localStorage.setItem("paint-id", 66);
             }
             Object.keys(localStorage).forEach((key) => {
                 const elemento_desktop = document.getElementById(`${key}`);
@@ -633,4 +655,5 @@
     </script>
     <script src="api-gato.js"></script>
 </body>
+
 </html>

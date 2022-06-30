@@ -414,7 +414,7 @@ body .modal-header {
   margin: 0 auto;
   margin-top: 10%;
   width: 604px;
-  height: 436px;
+  height: calc(404px + 5vh)
 }
 
 #pong .modal-header {
@@ -427,7 +427,8 @@ body .modal-header {
 }
 
 #pong #pong-logo,
-#paint #paint-logo {
+#paint #paint-logo,
+#calculadora-icone {
   width: 4vh;
 }
 
@@ -437,7 +438,8 @@ body .modal-header {
 }
 
 #pong .modal-header .header-botoes a:nth-child(2) img,
-#paint .modal-header .header-botoes a:nth-child(2) img {
+#paint .modal-header .header-botoes a:nth-child(2) img,
+#calculadora .modal-header .header-botoes a:nth-child(2) img {
   border: 1px solid #7da4bb;
   pointer-events: none;
 }
@@ -650,7 +652,42 @@ body .modal-header {
   height: 3vh;
 }
 
+/* IFRAMES */
 #chrome iframe {
-  height: 94%;
-  width: 99.8%;
+  height: calc(100% - 5vh - 4px);
+  width: 100%100%;
+}
+
+#calculadora iframe {
+  width: 240px;
+  height: 316px;
+}
+
+#paint iframe {
+  height: 425px;
+}
+
+/* CALCULADORA */
+#calculadora {
+  width: 244px;
+  height: calc(320px + 5vh) ;
+  margin-top: 7%;
+  margin-left: 57%;
+}
+#calculadora .header-botoes img {
+  margin-left: 3px;
+}
+
+#calculadora .header-botoes a {
+  width: 1.6vw;
+}
+
+#calculadora .modal-header {
+  width: 98%;
+}
+
+#calculadora .modal-header img {
+  width: 1.6vw;
+  height: 1.6vw;
+  
 }
